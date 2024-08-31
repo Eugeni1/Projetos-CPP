@@ -1,0 +1,95 @@
+#include <iostream>
+
+void converterTensaoParaCorrente(double tensao, double resistencia) {
+    if (resistencia != 0) {
+        double corrente = tensao / resistencia;
+        std::cout << "A corrente é: " << corrente << " amperes" << std::endl;
+    } else {
+        std::cout << "Resistência não pode ser zero!" << std::endl;
+    }
+}
+
+void converterCorrenteParaTensao(double corrente, double resistencia) {
+    double tensao = corrente * resistencia;
+    std::cout << "A tensão é: " << tensao << " volts" << std::endl;
+}
+
+void converterTensaoParaResistencia(double tensao, double corrente) {
+    if (corrente != 0) {
+        double resistencia = tensao / corrente;
+        std::cout << "A resistência é: " << resistencia << " ohms" << std::endl;
+    } else {
+        std::cout << "Corrente não pode ser zero!" << std::endl;
+    }
+}
+
+void converterResistenciaParaTensao(double resistencia, double corrente) {
+    double tensao = corrente * resistencia;
+    std::cout << "A tensão é: " << tensao << " volts" << std::endl;
+}
+
+void converterResistenciaParaCorrente(double resistencia, double tensao) {
+    if (resistencia != 0) {
+        double corrente = tensao / resistencia;
+        std::cout << "A corrente é: " << corrente << " amperes" << std::endl;
+    } else {
+        std::cout << "Resistência não pode ser zero!" << std::endl;
+    }
+}
+
+int main() {
+    int escolha;
+    double valor1, valor2;
+
+    std::cout << "Calculadora de Conversão Elétrica" << std::endl;
+    std::cout << "1. Converter Tensão para Corrente" << std::endl;
+    std::cout << "2. Converter Corrente para Tensão" << std::endl;
+    std::cout << "3. Converter Tensão para Resistência" << std::endl;
+    std::cout << "4. Converter Resistência para Tensão" << std::endl;
+    std::cout << "5. Converter Resistência para Corrente" << std::endl;
+    std::cout << "Escolha uma opção (1-5): ";
+    std::cin >> escolha;
+
+    switch (escolha) {
+        case 1:
+            std::cout << "Digite a tensão (em volts): ";
+            std::cin >> valor1;
+            std::cout << "Digite a resistência (em ohms): ";
+            std::cin >> valor2;
+            converterTensaoParaCorrente(valor1, valor2);
+            break;
+        case 2:
+            std::cout << "Digite a corrente (em amperes): ";
+            std::cin >> valor1;
+            std::cout << "Digite a resistência (em ohms): ";
+            std::cin >> valor2;
+            converterCorrenteParaTensao(valor1, valor2);
+            break;
+        case 3:
+            std::cout << "Digite a tensão (em volts): ";
+            std::cin >> valor1;
+            std::cout << "Digite a corrente (em amperes): ";
+            std::cin >> valor2;
+            converterTensaoParaResistencia(valor1, valor2);
+            break;
+        case 4:
+            std::cout << "Digite a resistência (em ohms): ";
+            std::cin >> valor1;
+            std::cout << "Digite a corrente (em amperes): ";
+            std::cin >> valor2;
+            converterResistenciaParaTensao(valor1, valor2);
+            break;
+        case 5:
+            std::cout << "Digite a resistência (em ohms): ";
+            std::cin >> valor1;
+            std::cout << "Digite a tensão (em volts): ";
+            std::cin >> valor2;
+            converterResistenciaParaCorrente(valor1, valor2);
+            break;
+        default:
+            std::cout << "Opção inválida!" << std::endl;
+            break;
+    }
+
+    return 0;
+}
