@@ -1,0 +1,44 @@
+#include <iostream>
+#include <cmath> // Para usar a função sqrt (raiz quadrada)
+
+int main() {
+    // Declarar as variáveis
+    double a, b, c;
+    double delta, x1, x2;
+
+    // Solicitar ao usuário os coeficientes da equação
+    std::cout << "Digite o coeficiente a: ";
+    std::cin >> a;
+    std::cout << "Digite o coeficiente b: ";
+    std::cin >> b;
+    std::cout << "Digite o coeficiente c: ";
+    std::cin >> c;
+
+    // Calcular o discriminante (delta)
+    delta = b * b - 4 * a * c;
+
+    // Verificar se o coeficiente 'a' é zero
+    if (a == 0) {
+        std::cout << "O coeficiente 'a' não pode ser zero em uma equação quadrática." << std::endl;
+        return 1; // Encerrar o programa com um código de erro
+    }
+
+    // Verificar o valor de delta para determinar o tipo de raízes
+    if (delta > 0) {
+        // Duas raízes reais e diferentes
+        x1 = (-b + sqrt(delta)) / (2 * a);
+        x2 = (-b - sqrt(delta)) / (2 * a);
+        std::cout << "As raízes reais são: x1 = " << x1 << " e x2 = " << x2 << std::endl;
+    } else if (delta == 0) {
+        // Uma raiz real (raiz dupla)
+        x1 = -b / (2 * a);
+        std::cout << "A raiz real é: x1 = " << x1 << std::endl;
+    } else {
+        // Raízes complexas
+        double realPart = -b / (2 * a);
+        double imaginaryPart = sqrt(-delta) / (2 * a);
+        std::cout << "As raízes complexas são: x1 = " << realPart << " + " << imaginaryPart << "i e x2 = " << realPart << " - " << imaginaryPart << "i" << std::endl;
+    }
+
+    return 0; // Encerrar o programa com sucesso
+}
