@@ -1,0 +1,40 @@
+#include <iostream>
+#include <list>
+
+int main() {
+    // Criação de uma lista de inteiros
+    std::list<int> minhaLista;
+
+    // Adicionando elementos ao final da lista
+    minhaLista.push_back(10);
+    minhaLista.push_back(20);
+    minhaLista.push_back(30);
+
+    // Adicionando elementos no início da lista
+    minhaLista.push_front(5);
+
+    // Exibindo os elementos da lista
+    std::cout << "Elementos da lista: ";
+    for (int valor : minhaLista) {
+        std::cout << valor << " ";
+    }
+    std::cout << std::endl;
+
+    // Removendo um elemento específico (o valor 20)
+    minhaLista.remove(20);
+
+    // Removendo o primeiro elemento
+    minhaLista.pop_front();
+
+    // Removendo o último elemento
+    minhaLista.pop_back();
+
+    // Exibindo os elementos da lista após remoções
+    std::cout << "Elementos da lista após remoções: ";
+    for (int valor : minhaLista) {
+        std::cout << valor << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
