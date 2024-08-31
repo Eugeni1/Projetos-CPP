@@ -1,0 +1,63 @@
+#include <iostream>
+#include <limits>
+
+float ver_nota(int numero_nota){
+
+    float nota;
+    bool x =true;
+    
+    do{
+        while(x){
+            std::cout<<"Digite a "<<numero_nota<<"º nota entre 0 e 10: "<<std::endl;
+            if(std::cin>>nota){
+                x=false;
+                if(nota<0||nota>10){
+                std::cout<<"Nota inválida! por favor insira uma nota válida!"<<std::endl;
+                }
+             
+            }else{
+                
+                std::cout<<"Digite um número válido por favor!"<<std::endl;
+                std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');    
+            
+            }
+        }
+        
+    }while(nota<0||nota>10);
+    
+    return nota;
+}
+
+//espaço para organizar o código
+
+void media_aluno(float n1,float n2){
+
+    float media;
+
+    media=(n1+n2)/2;
+
+    if(media>=0&&media<7){
+        std::cout<<"Infelizmente o aluno não foi aprovado, seu desempenho escolar foi de média: "<<media<<std::endl;
+    }
+    else if(media>=7&&media<=10){
+        std::cout<<"Parabéns o aluno foi aprovado, seu desempenho escolar foi de média: "<<media<<std::endl;
+    }
+
+}
+
+//espaço para organizar o código
+
+int main(){
+
+
+        float n1;
+        float n2;
+
+        n1=ver_nota(1);
+        n2=ver_nota(2);
+
+        media_aluno(n1,n2);
+
+        return 0;
+}
