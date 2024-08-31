@@ -1,0 +1,65 @@
+#include <iostream>
+
+using namespace std;
+
+// Funções para operações
+double soma(double a, double b) {
+    return a + b;
+}
+
+double subtracao(double a, double b) {
+    return a - b;
+}
+
+double multiplicacao(double a, double b) {
+    return a * b;
+}
+
+double divisao(double a, double b) {
+    if (b != 0) {
+        return a / b;
+    } else {
+        cout << "Erro: Divisão por zero!" << endl;
+        return 0;
+    }
+}
+
+int main() {
+    int escolha;
+    double num1, num2;
+
+    cout << "Escolha uma operação:" << endl;
+    cout << "1. Soma" << endl;
+    cout << "2. Subtração" << endl;
+    cout << "3. Multiplicação" << endl;
+    cout << "4. Divisão" << endl;
+
+    cout << "Digite o número da operação (1/2/3/4): ";
+    cin >> escolha;
+
+    if (escolha >= 1 && escolha <= 4) {
+        cout << "Digite o primeiro número: ";
+        cin >> num1;
+        cout << "Digite o segundo número: ";
+        cin >> num2;
+
+        switch (escolha) {
+            case 1:
+                cout << "Resultado: " << soma(num1, num2) << endl;
+                break;
+            case 2:
+                cout << "Resultado: " << subtracao(num1, num2) << endl;
+                break;
+            case 3:
+                cout << "Resultado: " << multiplicacao(num1, num2) << endl;
+                break;
+            case 4:
+                cout << "Resultado: " << divisao(num1, num2) << endl;
+                break;
+        }
+    } else {
+        cout << "Escolha inválida!" << endl;
+    }
+
+    return 0;
+}
