@@ -1,0 +1,27 @@
+#include <iostream>
+
+int main(){
+
+int a = 10;         // Tipo inteiro padrão
+short b = 5;        // Inteiro de tamanho menor
+long c = 1000;      // Inteiro de tamanho maior
+long long d = 10000; // Inteiro ainda maior
+
+char letter = 'A';       // Um único caractere
+wchar_t wideChar = L'Ω'; // Caractere largo
+
+float f = 3.14f;         // Número com ponto flutuante de precisão simples
+double d = 3.141592;     // Número com ponto flutuante de precisão dupla
+long double ld = 3.141592653589793; // Número com ponto flutuante de precisão estendida
+
+bool isTrue = true;  // Valor booleano verdadeiro
+bool isFalse = false; // Valor booleano falso
+
+short s = 10;      // Inteiro de menor tamanho
+long l = 1000;     // Inteiro de maior tamanho
+long long ll = 10000; // Inteiro ainda maior
+
+#include <string>
+std::string str = "Hello, World!"; // Cadeia de caracteres
+
+}
