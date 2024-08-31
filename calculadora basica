@@ -1,0 +1,46 @@
+#include <iostream>
+
+int main() {
+    char operacao;
+    double num1, num2, resultado;
+
+    // Exibir opções de operação para o usuário
+    std::cout << "Calculadora Básica" << std::endl;
+    std::cout << "Escolha uma operação:" << std::endl;
+    std::cout << "'+' para adição" << std::endl;
+    std::cout << "'-' para subtração" << std::endl;
+    std::cout << "'*' para multiplicação" << std::endl;
+    std::cout << "'/' para divisão" << std::endl;
+    std::cout << "Digite a operação desejada: ";
+    std::cin >> operacao;
+
+    // Solicitar ao usuário que insira dois números
+    std::cout << "Digite o primeiro número: ";
+    std::cin >> num1;
+    std::cout << "Digite o segundo número: ";
+    std::cin >> num2;
+
+    // Realizar a operação selecionada usando if e else
+    if (operacao == '+') {
+        resultado = num1 + num2;
+        std::cout << "Resultado: " << resultado << std::endl;
+    } else if (operacao == '-') {
+        resultado = num1 - num2;
+        std::cout << "Resultado: " << resultado << std::endl;
+    } else if (operacao == '*') {
+        resultado = num1 * num2;
+        std::cout << "Resultado: " << resultado << std::endl;
+    } else if (operacao == '/') {
+        // Verificar se o divisor é zero antes de realizar a divisão
+        if (num2 != 0) {
+            resultado = num1 / num2;
+            std::cout << "Resultado: " << resultado << std::endl;
+        } else {
+            std::cerr << "Erro: Divisão por zero não é permitida!" << std::endl;
+        }
+    } else {
+        std::cerr << "Operação inválida!" << std::endl;
+    }
+
+    return 0;
+}
