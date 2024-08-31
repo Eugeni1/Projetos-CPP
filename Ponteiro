@@ -1,0 +1,12 @@
+#include <iostream>
+
+int main(){
+    
+    int var;
+    int* ptr;
+    ptr=&var;
+        
+    std::cout<<&ptr<<std::endl;
+    std::cout<<&var<<std::endl;
+    
+}
