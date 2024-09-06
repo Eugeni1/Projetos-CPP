@@ -3,7 +3,7 @@
 [![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=1E90FF&size=40&center=true&vCenter=true&width=1000&lines=Welcome+To+My+Repository+Of+Projects;In+CPP)](https://git.io/typing-svg)
 
 
-### Aqui você encontrá alguns projetos básicos e intermédiarios na linguagem C++.
+### Aqui você vai se deparar com alguns projetos básicos e intermédiarios na linguagem C++.
 
 ### Este repositório está em constante mudança devido ao aprendizado contínuo na linguagem.
 
