@@ -4,3 +4,7 @@
 
 
 <img width=150% src="https://capsule-render.vercel.app/api?type=waving&color=4169E1&heigth=150&section=footer"/>
+
+##Aqui você encontrá alguns projetos básicos e intermédiarios na linguagem C++.
+##Este repositório está em constante mudança devido ao aprendizado contínuo na linguagem.
+##Periodicamente o repositório é atualizado com novos códigos semanalmente.
