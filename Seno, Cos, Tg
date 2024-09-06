@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath> // Biblioteca para funções matemáticas
+using namespace std;
+
+int main() {
+    double angulo, radianos, seno, cosseno, tangente;
+
+    // Solicita o ângulo em graus
+    cout << "Digite o ângulo em graus: ";
+    cin >> angulo;
+
+    // Converte o ângulo para radianos
+    radianos = angulo * M_PI / 180.0;
+
+    // Calcula o seno, cosseno e tangente
+    seno = sin(radianos);
+    cosseno = cos(radianos);
+    tangente = tan(radianos);
+
+    // Exibe os resultados
+    cout << "Seno: " << seno << endl;
+    cout << "Cosseno: " << cosseno << endl;
+    cout << "Tangente: " << tangente << endl;
+
+    return 0;
+}
