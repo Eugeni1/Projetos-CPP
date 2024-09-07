@@ -9,4 +9,4 @@
 #### Periodicamente o repositório é atualizado com novos códigos semanalmente.
 
 
-<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=4169E1&heigth=150&section=footer"/>
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=4169E1&heigth=250&section=footer"/>
